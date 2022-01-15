@@ -1,0 +1,17 @@
+<table class="table text-center table-hover ">
+    <tbody class="">
+     <tr>
+       <th class="celda">{{persona.id}}</th>
+       <td class="celda">{{persona.nombre}}</td>
+       <td class="celda">{{persona.apaterno}}</td>
+       <td class="celda">{{persona.amaterno}}</td>
+       <td class="celda">{{persona.domicilio}}</td>
+       <td class="celda">{{persona.telefono}}</td>
+       <td class="celda">
+         <button class="btn btn-primary" (click)="this.Modificar(persona)">Modificar</button>
+         <button class="btn btn-danger" (click)="this.Eliminar(persona)">Eliminar</button>
+       </td>  
+     </tr>
+    </tbody>
+  </table>
+ 

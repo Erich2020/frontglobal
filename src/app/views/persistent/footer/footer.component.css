@@ -1,0 +1,19 @@
+.fondo{
+    background-color: rgba(3, 3, 46, 0.829);
+    background-repeat: no-repeat;
+    align-items: center;
+}
+.color{
+    color:gold;
+}
+.fixed{
+    width: 100%;
+    align-items: center;
+    bottom: 0;
+    z-index: 10;
+    position: fixed;
+}
+.aling-bottom{
+    bottom: 0;
+    height: 5em;
+}

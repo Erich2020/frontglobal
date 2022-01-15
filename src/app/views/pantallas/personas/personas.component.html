@@ -1,0 +1,35 @@
+<div class ="container text-center">
+    <div class="card text-center">
+        <form novalidate [formGroup]="fbusqueda" accept-charset="utf-8" (keydown.enter)="suprimirEnter()">
+          <label for="busqueda" [style.visibility]="(width<640)?'hidden':'visible'">Busqueda de Usuario: </label><br>
+          <input
+            type="text"
+            name="busqueda"
+            formControlName="busqueda"
+            placeholder="Busqueda de Persona"
+          />
+          <br>
+          <select formControlName="filtro" (change)="this.cambio()"
+      (selectstart)="Buscar()">
+        <optgroup label="Buscar Por: ">
+          <option value="1" formControlName ="op_nombre" selected>Nombre</option>
+          <option value="2" formControlName ="op_paterno" >Apellido Paterno</option>
+          <option value="3" formControlName ="op_materno" >Apellido Materno</option>
+        </optgroup>
+      </select>
+          <button (click)="this.Buscar()" class="btn btn-primary m-3">
+            Buscar
+          </button>
+          <button (click)="this.Nuevo()" class="btn btn-primary m-3">Nuevo</button>
+        </form>
+    
+</div>
+<br>
+    <app-list-personas [hidden]="toggle"
+     [personas]="this.personas"
+     (btnModificar)="btnModificar($event)"></app-list-personas>
+<br>
+<app-form-gestion [hidden]="!toggle"
+[persona]="this.persona"
+>
+</app-form-gestion>

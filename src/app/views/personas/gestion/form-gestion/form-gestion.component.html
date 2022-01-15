@@ -1,0 +1,67 @@
+<div class="container col-2"></div>
+<div class="container text-center">
+  <h1 class="card">Gestion de Personas</h1>
+  <div class="card text-center">
+    <h2>{{ message }}</h2>
+    <h3>{{ validacion}}</h3>
+    <form novalidate [formGroup]="fPersona" accept-charset="utf-8" (keydown.enter)="suprimirEnter()">
+      <label for="nombre" class="col-3 m-1" [style.visibility]="(width<640)?'hidden':'visible'" width = '40px'>Nombre(s)</label><br>
+      <input
+        type="text"
+        name="nombre"
+        class="text-center"
+        formControlName="nombre"
+        placeholder="Nombre(s)"
+      />
+      <br>
+      <label for="paterno" class="col-3 m-1" [style.visibility]="(width<640)?'hidden':'visible'">Ap. Paterno</label><br>
+      <input
+        type="text"
+        name="paterno"
+        class="text-center"
+        formControlName="paterno"
+        placeholder="Apellido Paterno"
+      />
+      <br>
+      <label for="materno" class="col-3 m-1" [style.visibility]="(width<640)?'hidden':'visible'">Ap. Materno</label><br>
+      <input
+        type="text"
+        name="materno"
+        class="text-center"
+        formControlName="materno"
+        placeholder="Apellido Materno"
+      />
+      <br>
+      <label for="domicilio" class="col-3 m-1" [style.visibility]="(width<640)?'hidden':'visible'">Domicilio</label><br>
+      <input
+        type="text"
+        name="domicilio"
+        class="text-center"
+        formControlName="domicilio"
+        placeholder="Domicilio"
+      />
+      <br>
+      <label for="telefono" class="col-3 m-1" [style.visibility]="(width<640)?'hidden':'visible'">Teléfono</label><br>
+      <input
+        type="text"
+        name="telefono"
+        class="text-center"
+        formControlName="telefono"
+        placeholder="Teléfono"
+      />
+      <br>
+      <button
+        type="submit"
+        class="btn btn-primary m-3"
+        (click)="this.Guardar()"
+      >
+        Guardar
+      </button>
+      <button class="btn btn-danger m-3" (click)="this.Eliminar()">
+        Eliminar
+      </button>
+      <br >
+    </form>
+  </div>
+</div>
+<div class="container col-2"></div>
